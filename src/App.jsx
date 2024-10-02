@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "/src/App.css";
 import Description from "./components/Description/Description";
 import Options from "./components/Options/Options";

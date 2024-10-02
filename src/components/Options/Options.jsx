@@ -2,7 +2,7 @@ import styles from "./Options.module.css";
 
 const Options = ({ updateFeedback, totalFeedback, resetFeedback }) => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <button onClick={() => updateFeedback("good")} type="button">
         Good
       </button>

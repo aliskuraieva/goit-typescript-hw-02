@@ -4,7 +4,7 @@ const Description = () => {
   return (
     <div>
       <h2 className={styles.title}>Sip Happens Café</h2>
-      <p>
+      <p className={styles.text}>
         Please leave your feedback about our service by selecting one of the
         options below.
       </p>
