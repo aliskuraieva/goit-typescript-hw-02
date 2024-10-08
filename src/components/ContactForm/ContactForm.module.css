@@ -5,7 +5,8 @@
   width: 400px;
   padding: 16px;
   border-radius: 8px;
-  border: 1px solid black;
+  border: 2px solid black;
+  margin-bottom: 15px;
 }
 
 .label {
@@ -29,4 +30,11 @@
   margin: 0 auto;
   border-radius: 4px;
   background-color: rgb(241, 239, 239);
+}
+
+.errorMessage {
+  color: red;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 200;
 }

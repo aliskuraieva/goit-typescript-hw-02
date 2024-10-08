@@ -20,7 +20,7 @@ const ContactForm = ({ onAddContact }) => {
       validationSchema={addContactSchema}
       onSubmit={handleSubmit}
     >
-      <Form onSubmit={handleSubmit} className={styles.form}>
+      <Form className={styles.form}>
         <label className={styles.label}>
           <span className={styles.text}>Name:</span>
           <Field type="text" name="name" className={styles.input} />
@@ -34,7 +34,11 @@ const ContactForm = ({ onAddContact }) => {
         <label className={styles.label}>
           <span className={styles.text}>Number:</span>
           <Field className={styles.input} type="text" name="number" />
-          <ErrorMessage name="number" component="span" />
+          <ErrorMessage
+            className={styles.errorMessage}
+            name="number"
+            component="span"
+          />
         </label>
 
         <button className={styles.btn} type="submit">
