@@ -1,4 +1,4 @@
-import "/src/App.css";
+import "/src/components/App/";
 import { useEffect, useState } from "react";
 import { fetchImages } from "./api/unsplash-api";
 import SearchBar from "./components/SearchBar/SearchBar";
