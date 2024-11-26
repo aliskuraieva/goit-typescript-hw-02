@@ -1,0 +1,9 @@
+.loadMore {
+  background-color: rgb(26, 141, 133);
+  border: none;
+}
+
+.loadMore:hover {
+  animation: pulse 1.5s infinite;
+  transform: scale(1.05);
+}

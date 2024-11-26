@@ -1,18 +1,24 @@
-import styles from "./SearchBar.module.css";
+import { FormEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-const SearchBar = ({ onSubmit }) => {
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    const form = evt.target;
-    const value = form.elements.text.value.trim();
-    if (value === "" || value === null) {
-      toast.error("This is an invalid request. Try again!");
+import styles from "./SearchBar.module.css";
+
+interface SearchBarProps {
+  onSubmit: (userWord: string) => void;
+}
+
+const SearchBar = ({ onSubmit }: SearchBarProps) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const userInput = form.elements.namedItem("text") as HTMLInputElement;
+    const userWord = userInput.value.trim();
+    if (!userWord) {
+      toast.error("Enter text before search");
       return;
-    } else {
-      onSubmit(value);
-      form.reset();
     }
+
+    onSubmit(userWord);
   };
   return (
     <header className={styles.header}>
@@ -29,7 +35,6 @@ const SearchBar = ({ onSubmit }) => {
           Search
         </button>
       </form>
-      <Toaster position="top-right" />
     </header>
   );
 };
