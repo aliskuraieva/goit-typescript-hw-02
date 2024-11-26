@@ -1,6 +1,10 @@
 import styles from "./ErrorMessage.module.css";
 
-const ErrorMessage = () => {
+interface ErrorMessageProps {
+  message: string;
+}
+
+const ErrorMessage = ({ message }: ErrorMessageProps) => {
   return (
     <p className={styles.error}>
       Oops! Something went wrong. Please try again.

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import styles from "./App.css";
+import "./App.css";
 
 import SearchBar from "./components/SearchBar/SearchBar";
 import ImageGallery from "./components/ImageGallery/ImageGallery";
@@ -80,10 +80,16 @@ function App() {
       {images.length > 0 && (
         <ImageGallery images={images} onOpenModal={onOpenModal} />
       )}
-      {loader && <Loader />}
-      {error && <ErrorMessage />}
 
-      {images.length > 0 && page < totalPages && (
+      {error && (
+        <ErrorMessage
+          message={
+            "Whoops, something went wrong! Please try reloading this page!"
+          }
+        />
+      )}
+      {loader && <Loader />}
+      {images.length > 0 && !loader && page < totalPages && (
         <LoadMoreBtn onClick={handleChangePage} />
       )}
       {modalIsOpen && (

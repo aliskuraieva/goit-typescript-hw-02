@@ -1,5 +1,4 @@
 import axios from "axios";
-import ResponseFetchImages from "../App";
 
 axios.defaults.baseURL = "https://api.unsplash.com/";
 const CLIENT_ID = "NSIOMXvAsGsE4GGBhHMffQIdymvSVWisvf04QQrDVb0";

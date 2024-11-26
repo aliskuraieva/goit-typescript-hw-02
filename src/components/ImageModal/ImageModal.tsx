@@ -40,13 +40,12 @@ const ImageModal = ({
         style={{
           maxWidth: "100%",
           maxHeight: "80vh",
-          marginBottom: "20px",
           objectFit: "contain",
         }}
       />
       <ul className={styles.info}>
         <li>
-          <p>Author: {imgModal?.author || "without name"}</p>
+          <p>Author: {imgModal?.author || "without name"} </p>
         </li>
         <li>
           <p>Description: {imgModal?.description || "'without description'"}</p>
